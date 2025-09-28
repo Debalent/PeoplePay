@@ -1,13 +1,17 @@
 // client/components/TransactionCard.js
 import React from 'react';
+import formatCurrency from '../utils/formatCurrency';
 
 export default function TransactionCard({ transaction }) {
   const { type, to, from, amount, date } = transaction;
 
   return (
     <div style={styles.card}>
-      <p><strong>{type}</strong> {type === 'Sent' ? `to ${to}` : `from ${from}`}</p>
-      <p>Amount: ${amount.toFixed(2)}</p>
+      <p>
+        <strong>{type}</strong>{' '}
+        {type === 'Sent' ? `to ${to}` : `from ${from}`}
+      </p>
+      <p>Amount: {formatCurrency(amount)}</p>
       <p>Date: {date}</p>
     </div>
   );
