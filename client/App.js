@@ -4,6 +4,7 @@ import Home from './screens/Home';
 import Send from './screens/Send';
 import Receive from './screens/Receive';
 import Dashboard from './screens/Dashboard';
+import ParentalControls from './screens/ParentalControls';
 import NavBar from './components/NavBar';
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/send" element={<Send />} />
         <Route path="/receive" element={<Receive />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/controls" element={<ParentalControls />} />
       </Routes>
     </Router>
   );
