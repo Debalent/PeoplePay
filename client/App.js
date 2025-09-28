@@ -4,10 +4,12 @@ import Home from './screens/Home';
 import Send from './screens/Send';
 import Receive from './screens/Receive';
 import Dashboard from './screens/Dashboard';
+import NavBar from './components/NavBar';
 
 export default function App() {
   return (
     <Router>
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/send" element={<Send />} />
