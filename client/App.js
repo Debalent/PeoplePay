@@ -2,6 +2,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './screens/Home';
 import Send from './screens/Send';
+import Receive from './screens/Receive';
+import Dashboard from './screens/Dashboard';
 
 export default function App() {
   return (
@@ -9,7 +11,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/send" element={<Send />} />
-        {/* Add more routes here */}
+        <Route path="/receive" element={<Receive />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
   );
