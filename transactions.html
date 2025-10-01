@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transactions | PeoplePay</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/theme.css" />
+</head>
+<body>
+  <nav id="navbar"></nav>
+
+  <main class="transactions-page" role="main">
+    <h1>Transaction History</h1>
+
+    <section class="filters" aria-label="Transaction filters">
+      <input type="text" id="searchInput" placeholder="Search by recipient or note…" />
+      <select id="typeFilter">
+        <option value="">All Types</option>
+        <option value="sent">Sent</option>
+        <option value="received">Received</option>
+      </select>
+      <select id="statusFilter">
+        <option value="">All Statuses</option>
+        <option value="completed">Completed</option>
+        <option value="pending">Pending</option>
+        <option value="failed">Failed</option>
+      </select>
+      <input type="date" id="dateFilter" />
+      <button onclick="applyFilters()" class="secondary-btn">Apply Filters</button>
+    </section>
+
+    <section id="transactionList" aria-label="Transaction list">
+      <ul class="transaction-items">
+        <!-- Transactions will be injected here -->
+      </ul>
+    </section>
+
+    <div class="pagination">
+      <button onclick="prevPage()" class="secondary-btn">Previous</button>
+      <span id="pageIndicator">Page 1</span>
+      <button onclick="nextPage()" class="secondary-btn">Next</button>
+    </div>
+  </main>
+
+  <footer id="footer"></footer>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <script src="components/navbar.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="components/toast.js"></script>
+  <script src="scripts/api.js"></script>
+  <script src="scripts/transactions.js"></script>
+</body>
+</html>
