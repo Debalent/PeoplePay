@@ -8,7 +8,7 @@ async function apiRequest(endpoint, method = "GET", body = null) {
 
   const headers = {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${token}`,
+    ...(token && { Authorization: `Bearer ${token}` }),
   };
 
   const config = {
@@ -19,7 +19,10 @@ async function apiRequest(endpoint, method = "GET", body = null) {
 
   try {
     const response = await fetch(`${API_BASE}${endpoint}`, config);
-    if (!response.ok) throw new Error(`API error: ${response.status}`);
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`API error: ${response.status} - ${errorText}`);
+    }
     return await response.json();
   } catch (err) {
     console.error("API request failed:", err);
@@ -27,29 +30,65 @@ async function apiRequest(endpoint, method = "GET", body = null) {
   }
 }
 
-// Send money transaction
+//
+// 🔹 Transactions
+//
 async function sendTransaction({ recipient, amount, note }) {
-  return await apiRequest("/transactions/send", "POST", {
-    recipient,
-    amount,
-    note,
-  });
+  return await apiRequest("/transactions/send", "POST", { recipient, amount, note });
 }
 
-// Fetch user balance
+async function fetchTransactions({ search, type, status, date, page, pageSize }) {
+  const params = new URLSearchParams({ search, type, status, date, page, pageSize });
+  return await apiRequest(`/transactions?${params.toString()}`);
+}
+
+//
+// 🔹 Balance & Activity
+//
 async function fetchBalance() {
   return await apiRequest("/users/balance");
 }
 
-// Fetch recent activity
 async function fetchActivity() {
   return await apiRequest("/users/activity");
 }
 
-// Future expansion: link bank, verify KYC, etc.
+//
+// 🔹 Requests
+//
+async function logPaymentRequest({ amount, note }) {
+  return await apiRequest("/requests/create", "POST", { amount, note });
+}
+
+//
+// 🔹 Profile
+//
+async function fetchUserProfile() {
+  return await apiRequest("/users/profile");
+}
+
+async function updateUserProfile(data) {
+  return await apiRequest("/users/profile", "PUT", data);
+}
+
+//
+// 🔹 Admin (future expansion)
+//
+async function fetchAdminMetrics() {
+  return await apiRequest("/admin/metrics");
+}
+
+//
+// 🔹 Export functions
+//
 export {
+  apiRequest,
   sendTransaction,
+  fetchTransactions,
   fetchBalance,
   fetchActivity,
-  apiRequest,
+  logPaymentRequest,
+  fetchUserProfile,
+  updateUserProfile,
+  fetchAdminMetrics,
 };
