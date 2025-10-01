@@ -1,5 +1,3 @@
-// components/navbar.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.getElementById("navbar");
   if (!navbar) return;
@@ -28,13 +26,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   navbar.innerHTML = `
     <div class="navbar-container" role="navigation" aria-label="Main navigation">
-      <a href="dashboard.html" class="logo">PeoplePay</a>
+      <a href="dashboard.html" class="logo-link">
+        <img src="/assets/logo.jpg" alt="PeoplePay logo" class="logo" />
+      </a>
       <ul class="nav-links">${navLinks}</ul>
       <button class="logout-btn" onclick="logout()" aria-label="Log out">Logout</button>
     </div>
   `;
 });
 
+function logout() {
+  localStorage.removeItem("peoplepay_token");
+  localStorage.removeItem("peoplepay_role");
+  window.location.href = "login.html";
+}
 function logout() {
   localStorage.removeItem("peoplepay_token");
   localStorage.removeItem("peoplepay_role");
