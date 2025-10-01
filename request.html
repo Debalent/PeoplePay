@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Payment | PeoplePay</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/theme.css" />
+</head>
+<body>
+  <nav id="navbar"></nav>
+
+  <main class="form-page" role="main">
+    <h1>Request Payment</h1>
+    <form id="requestForm" autocomplete="off" aria-label="Request payment form">
+      <label for="amount">Amount</label>
+      <input type="number" id="amount" name="amount" min="1" step="0.01" placeholder="$0.00" required />
+
+      <label for="note">Note (optional)</label>
+      <textarea id="note" name="note" rows="3" placeholder="Add a message…"></textarea>
+
+      <button type="submit" class="primary-btn">Generate Request</button>
+    </form>
+
+    <section id="requestPreview" class="hidden">
+      <h3>Share This Request</h3>
+      <div class="qr-container">
+        <canvas id="qrCanvas" aria-label="QR code for payment request"></canvas>
+      </div>
+      <input type="text" id="requestLink" readonly />
+      <button onclick="copyRequestLink()" class="secondary-btn">Copy Link</button>
+    </section>
+  </main>
+
+  <footer id="footer"></footer>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <script src="components/navbar.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="components/toast.js"></script>
+  <script src="scripts/api.js"></script>
+  <script src="scripts/validate-request.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</body>
+</html>
