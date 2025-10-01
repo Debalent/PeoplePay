@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | PeoplePay</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/theme.css" />
+</head>
+<body>
+  <nav id="navbar"></nav>
+
+  <main class="admin-page" role="main">
+    <h1>Admin Dashboard</h1>
+
+    <section class="metrics" aria-label="Platform metrics">
+      <div class="metric-card">
+        <h3>Total Users</h3>
+        <p id="metric-users">—</p>
+      </div>
+      <div class="metric-card">
+        <h3Total Volume</h3>
+        <p id="metric-volume">—</p>
+      </div>
+      <div class="metric-card">
+        <h3>Growth Rate</h3>
+        <p id="metric-growth">—</p>
+      </div>
+    </section>
+
+    <section class="admin-controls">
+      <h2>Controls</h2>
+      <p>🔒 Admin-only actions will appear here.</p>
+    </section>
+  </main>
+
+  <footer id="footer"></footer>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <script src="components/navbar.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="components/toast.js"></script>
+  <script src="scripts/api.js"></script>
+  <script src="scripts/admin.js"></script>
+</body>
+</html>
