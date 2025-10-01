@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile | PeoplePay</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/theme.css" />
+</head>
+<body>
+  <nav id="navbar"></nav>
+
+  <main class="profile-page" role="main">
+    <h1>Your Profile</h1>
+    <form id="profileForm" aria-label="User profile form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" disabled />
+
+      <label for="kyc">KYC Status</label>
+      <input type="text" id="kyc" name="kyc" disabled />
+
+      <button type="submit" class="primary-btn">Save Changes</button>
+    </form>
+
+    <section class="linked-accounts">
+      <h3>Linked Accounts</h3>
+      <ul id="linkedList">
+        <li>🔗 Bank of America - ****1234</li>
+        <li>🔗 PayPal - demond@paypal.com</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer id="footer"></footer>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <script src="components/navbar.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="components/toast.js"></script>
+  <script src="scripts/api.js"></script>
+  <script src="scripts/profile.js"></script>
+</body>
+</html>
