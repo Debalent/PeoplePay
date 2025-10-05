@@ -12,19 +12,19 @@ const slides = [
     key: '1',
     title: 'Send Money Instantly',
     description: 'Transfer funds to friends and family in seconds.',
-    image: require('./assets/send.png'),
+  image: require('./assets/send.svg'),
   },
   {
     key: '2',
     title: 'Track Transactions',
     description: 'View your payment history and stay organized.',
-    image: require('./assets/history.png'),
+  image: require('./assets/history.svg'),
   },
   {
     key: '3',
     title: 'Set Spending Limits',
     description: 'Control spending with parental controls and alerts.',
-    image: require('./assets/limits.png'),
+  image: require('./assets/limits.svg'),
   },
 ];
 

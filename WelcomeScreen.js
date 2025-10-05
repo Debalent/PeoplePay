@@ -10,7 +10,7 @@ const WelcomeScreen = ({ onContinue }) => {
     <View style={styles.container}>
       {/* Logo or Illustration */}
       <Image
-        source={require('./assets/welcome.png')}
+  source={require('./assets/welcome.svg')}
         style={styles.image}
       />
       {/* Developer Note: Replace with branded illustration or animation */}

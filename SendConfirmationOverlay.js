@@ -9,7 +9,7 @@ const SendConfirmationOverlay = ({ recipient, amount }) => {
   return (
     <View style={styles.overlay}>
       <Image
-        source={require('./assets/checkmark.png')}
+  source={require('./assets/checkmark.svg')}
         style={styles.icon}
       />
       <Text style={styles.header}>Payment Sent!</Text>

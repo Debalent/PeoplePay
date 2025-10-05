@@ -1,6 +1,6 @@
 // client/screens/Home.js
 import React from 'react';
-import logo from '../assets/PeoplePayLogo.jpeg';
+import logo from '../assets/PeoplePayLogo.jpg';
 
 export default function Home() {
   return (

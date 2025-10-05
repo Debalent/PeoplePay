@@ -5,14 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!footer) return;
 
   footer.innerHTML = `
-    <div class="footer-container" role="contentinfo">
-      <p>&copy; ${new Date().getFullYear()} PeoplePay. All rights reserved.</p>
-      <ul class="footer-links">
-        <li><a href="terms.html">Terms</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <span class="version-tag">v1.0.0</span>
-    </div>
+    <footer class="bg-white border-t mt-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        <p class="text-sm text-gray-600 mb-0">&copy; ${new Date().getFullYear()} PeoplePay. All rights reserved.</p>
+        <div class="space-x-4">
+          <a class="text-sm text-gray-600 hover:text-blue-600" href="terms.html">Terms</a>
+          <a class="text-sm text-gray-600 hover:text-blue-600" href="privacy.html">Privacy</a>
+          <a class="text-sm text-gray-600 hover:text-blue-600" href="contact.html">Contact</a>
+        </div>
+        <small class="text-xs text-gray-400">v1.0.0</small>
+      </div>
+    </footer>
   `;
 });

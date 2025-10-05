@@ -9,7 +9,7 @@ const RequestConfirmationOverlay = ({ recipient, amount }) => {
   return (
     <View style={styles.overlay}>
       <Image
-        source={require('./assets/request.png')}
+        source={require('./assets/request.svg')}
         style={styles.icon}
       />
       <Text style={styles.header}>Request Sent!</Text>

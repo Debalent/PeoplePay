@@ -9,7 +9,7 @@ const TransferSuccessScreen = ({ recipient, amount }) => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('./assets/success.png')}
+  source={require('./assets/success.svg')}
         style={styles.icon}
       />
       <Text style={styles.header}>Transfer Successful</Text>

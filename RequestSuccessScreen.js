@@ -9,7 +9,7 @@ const RequestSuccessScreen = ({ recipient, amount }) => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('./assets/request_success.png')}
+  source={require('./assets/request_success.svg')}
         style={styles.icon}
       />
       <Text style={styles.header}>Request Sent</Text>
