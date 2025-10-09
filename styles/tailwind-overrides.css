@@ -1,24 +1,97 @@
 /* tailwind-overrides.css
-   Small brand overrides and dropdown carousel sizing for Tailwind migration.
+   Enhanced design tokens and a small utility surface to smooth the
+   Tailwind Play CDN migration. Avoids using @apply so no build step is
+   required. Add or tweak tokens as needed.
+*/
+  --pp-accent: #10b981;     /* emerald-500 */
+  --pp-muted: #6b7280;      /* gray-500 */
+  --pp-bg: #f8fafc;         /* gray-50 */
+  --pp-surface: #ffffff;    /* surface */
+
+  /* Typography scale */
+  --pp-h1: 1.5rem; /* 24px */
+  --pp-h2: 1.25rem; /* 20px */
+  --pp-body: 1rem;  /* 16px */
+}
++
++
+/* Layout helpers */
+.pp-container { max-width: 1120px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+.pp-card { background: var(--pp-surface); border-radius: .5rem; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 2px 6px rgba(16,24,40,0.06); padding: 1rem; }
+.pp-muted { color: var(--pp-muted); }
+
+/* Buttons */
+/* tailwind-overrides.css
+   Enhanced design tokens and a small utility surface to smooth the
+   Tailwind Play CDN migration. Avoids using @apply so no build step is
+   required. Add or tweak tokens as needed.
 */
 
 :root {
-  --pp-primary: #2563eb;
-  --pp-accent: #10b981;
+  /* Brand palette */
+  --pp-primary: #2563eb;    /* blue-600 */
+  --pp-primary-600: #1d4ed8;/* blue-700 */
+  --pp-accent: #10b981;     /* emerald-500 */
+  --pp-muted: #6b7280;      /* gray-500 */
+  --pp-bg: #f8fafc;         /* gray-50 */
+  --pp-surface: #ffffff;    /* surface */
+
+  /* Typography scale */
+  --pp-h1: 1.5rem; /* 24px */
+  --pp-h2: 1.25rem; /* 20px */
+  --pp-body: 1rem;  /* 16px */
 }
 
+
+/* Layout helpers */
+.pp-container { max-width: 1120px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+.pp-card { background: var(--pp-surface); border-radius: .5rem; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 2px 6px rgba(16,24,40,0.06); padding: 1rem; }
+.pp-muted { color: var(--pp-muted); }
+
+/* Buttons */
 .primary-btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
   padding: .5rem 1rem;
-  border-radius: .375rem;
+  border-radius: .5rem;
   color: #fff;
   background-color: var(--pp-primary);
+  border: 1px solid rgba(0,0,0,0.03);
+  font-weight: 600;
 }
+.primary-btn:hover { background-color: var(--pp-primary-600); }
+
 .secondary-btn {
-  display: inline-block;
-  padding: .35rem .75rem;
-  border-radius: .375rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .45rem .9rem;
+  border-radius: .5rem;
   border: 1px solid #e5e7eb;
+  background: transparent;
+  color: var(--pp-muted);
 }
 
+.ghost-btn { background: transparent; border: none; color: var(--pp-primary); }
+
+/* Small utilities for modals and toasts */
+.pp-modal { background: rgba(15,23,42,0.6); position: fixed; inset: 0; display:flex; align-items:center; justify-content:center; z-index:60; }
+.pp-modal .panel { width: 100%; max-width: 680px; background: var(--pp-surface); border-radius: .5rem; padding: 1.25rem; }
+
 .toast { position: fixed; right: 1rem; bottom: 1rem; z-index: 60; }
+
+/* Responsive helpers */
+@media (min-width: 768px) {
+  .pp-grid-2 { display: grid; grid-template-columns: 1fr 360px; gap: 1rem; }
+}
+
+/* Small form controls */
+.pp-input { width:100%; padding:.5rem .75rem; border:1px solid #e6e9ef; border-radius:.375rem; }
+
+/* Misc */
+.brand-mark { height: 2rem; }
+
+/* Typographic helpers */
+.pp-h1 { font-size: var(--pp-h1); font-weight: 700; }
+.pp-h2 { font-size: var(--pp-h2); font-weight: 600; }

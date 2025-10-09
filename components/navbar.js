@@ -25,15 +25,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   navbar.innerHTML = `
     <div class="bg-white border-b">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="pp-container">
         <div class="flex justify-between h-16 items-center">
           <div class="flex items-center">
-            <a href="dashboard.html" class="flex items-center">
-              <img src="/assets/PeoplePayLogo.jpg" alt="PeoplePay" class="h-8 mr-2" />
+            <a href="dashboard.html" class="flex items-center gap-3">
+              <img src="/assets/PeoplePayLogo.jpg" alt="PeoplePay" class="brand-mark" />
               <span class="font-semibold text-lg">PeoplePay</span>
             </a>
             <nav class="ml-8" aria-label="Primary">
-              <ul class="flex items-center">${navList}</ul>
+              <ul class="flex items-center gap-6">${navList}</ul>
             </nav>
           </div>
 
@@ -50,19 +50,19 @@ document.addEventListener("DOMContentLoaded", () => {
                       <img src="/assets/PeoplePayLogo.jpg" class="w-full h-36 object-cover rounded-md" alt="Send Money">
                       <h4 class="mt-2 font-semibold">Send Money</h4>
                       <p class="text-sm text-gray-600">Quickly send money to friends and family.</p>
-                      <a href="send.html" class="inline-block mt-2 px-3 py-1 bg-blue-600 text-white rounded-sm text-sm">Open</a>
+                      <a href="send.html" class="inline-block mt-2 primary-btn text-sm">Open</a>
                     </div>
                     <div class="carousel-item hidden">
                       <img src="/assets/PeoplePayLogo.jpg" class="w-full h-36 object-cover rounded-md" alt="Request Payment">
                       <h4 class="mt-2 font-semibold">Request Payment</h4>
                       <p class="text-sm text-gray-600">Create and share payment requests.</p>
-                      <a href="request.html" class="inline-block mt-2 px-3 py-1 bg-blue-600 text-white rounded-sm text-sm">Open</a>
+                      <a href="request.html" class="inline-block mt-2 primary-btn text-sm">Open</a>
                     </div>
                     <div class="carousel-item hidden">
                       <img src="/assets/PeoplePayLogo.jpg" class="w-full h-36 object-cover rounded-md" alt="Transactions">
                       <h4 class="mt-2 font-semibold">Transactions</h4>
                       <p class="text-sm text-gray-600">Review recent activity and exports.</p>
-                      <a href="transactions.html" class="inline-block mt-2 px-3 py-1 bg-blue-600 text-white rounded-sm text-sm">Open</a>
+                      <a href="transactions.html" class="inline-block mt-2 primary-btn text-sm">Open</a>
                     </div>
                   </div>
                   <div class="flex justify-between mt-3">
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
 
             <div class="relative">
-              <button id="userBtn" class="px-3 py-2 bg-blue-600 text-white rounded-md text-sm">Account ▾</button>
+              <button id="userBtn" class="primary-btn text-sm">Account ▾</button>
               <div id="userDropdown" class="hidden absolute right-0 mt-2 w-40 bg-white border rounded-md shadow-lg p-2 z-50">
                 <a class="block px-2 py-1 text-sm hover:bg-gray-100 rounded" href="profile.html">Profile</a>
                 <button class="w-full text-left px-2 py-1 text-sm hover:bg-gray-100 rounded" onclick="logout()">Logout</button>

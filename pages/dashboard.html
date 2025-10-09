@@ -15,49 +15,53 @@
   <nav id="navbar" aria-label="Main navigation"></nav>
 
   <main class="dashboard-container" role="main">
-    <section class="account-summary" aria-labelledby="balance-heading">
-      <h1 id="balance-heading">Welcome, Demond</h1>
-      <div class="balance-card">
-        <p>Current Balance</p>
-        <h2 id="user-balance">$2,450.00</h2>
-        <button class="primary-btn" onclick="openAddFundsModal()">Add Funds</button>
-      </div>
-    </section>
+    <div class="pp-container py-8">
+      <section class="account-summary" aria-labelledby="balance-heading">
+  <h1 id="balance-heading" class="pp-h1">Welcome, Demond</h1>
+        <div class="pp-card mt-4">
+          <p class="pp-muted">Current Balance</p>
+          <h2 id="user-balance" class="pp-h2">$2,450.00</h2>
+          <button class="primary-btn mt-3" onclick="openAddFundsModal()">Add Funds</button>
+        </div>
+      </section>
 
-    <section class="quick-actions" aria-labelledby="actions-heading">
-      <h3 id="actions-heading">Quick Actions</h3>
-      <div class="action-grid">
-        <a href="send.html" class="action-card">Send Money</a>
-        <a href="request.html" class="action-card">Request Payment</a>
-        <a href="transactions.html" class="action-card">View Transactions</a>
-        <a href="profile.html" class="action-card">Manage Profile</a>
-      </div>
-    </section>
+      <section class="quick-actions mt-8" aria-labelledby="actions-heading">
+        <h3 id="actions-heading">Quick Actions</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-3">
+          <a href="send.html" class="pp-card text-center">Send Money</a>
+          <a href="request.html" class="pp-card text-center">Request Payment</a>
+          <a href="transactions.html" class="pp-card text-center">View Transactions</a>
+          <a href="profile.html" class="pp-card text-center">Manage Profile</a>
+        </div>
+      </section>
 
-    <section class="recent-activity" aria-labelledby="activity-heading">
-      <h3 id="activity-heading">Recent Activity</h3>
-      <ul class="activity-list" id="activity-feed">
-        <li>✅ Sent $150 to @jordan via QR</li>
-        <li>📥 Received $200 from @clientX</li>
-        <li>🔄 Linked new bank account</li>
-      </ul>
-    </section>
+      <section class="recent-activity mt-8" aria-labelledby="activity-heading">
+        <h3 id="activity-heading">Recent Activity</h3>
+        <ul class="activity-list mt-2" id="activity-feed">
+          <li>✅ Sent $150 to @jordan via QR</li>
+          <li>📥 Received $200 from @clientX</li>
+          <li>🔄 Linked new bank account</li>
+        </ul>
+      </section>
+    </div>
   </main>
 
   <footer id="footer" aria-label="Footer navigation"></footer>
 
   <!-- Modal -->
-  <div id="addFundsModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-content">
+  <div id="addFundsModal" class="pp-modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="panel pp-card">
       <h2 id="modal-title">Add Funds</h2>
       <p>Are you sure you want to add funds to your account?</p>
-      <button onclick="confirmAddFunds()" class="primary-btn">Confirm</button>
-      <button onclick="closeAddFundsModal()" class="secondary-btn">Cancel</button>
+      <div class="mt-4 flex gap-2">
+        <button onclick="confirmAddFunds()" class="primary-btn">Confirm</button>
+        <button onclick="closeAddFundsModal()" class="secondary-btn">Cancel</button>
+      </div>
     </div>
   </div>
 
-  <!-- Toast -->
-  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <!-- Toast container (components/toast.js will append here if needed) -->
+  <div id="pp-toasts" class="toast" role="status" aria-live="polite"></div>
 
   <script src="components/navbar.js"></script>
   <script src="components/footer.js"></script>
