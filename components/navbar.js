@@ -3,17 +3,20 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!navbar) return;
 
   const currentPage = window.location.pathname.split("/").pop();
+  // pageBase resolves links so they work both from root (index.html)
+  // and from files under /pages/ (pages/dashboard.html)
+  const pageBase = window.location.pathname.includes('/pages/') ? '' : 'pages/';
 
   // Simulated role (replace with real auth logic later)
   const userRole = localStorage.getItem("peoplepay_role") || "user"; // 'admin', 'user', 'guest'
 
   const links = [
-    { label: "Dashboard", href: "dashboard.html", roles: ["admin", "user"] },
-    { label: "Send", href: "send.html", roles: ["admin", "user"] },
-    { label: "Request", href: "request.html", roles: ["admin", "user"] },
-    { label: "Transactions", href: "transactions.html", roles: ["admin", "user"] },
-    { label: "Profile", href: "profile.html", roles: ["admin", "user"] },
-    { label: "Admin Panel", href: "admin.html", roles: ["admin"] },
+    { label: "Dashboard", href: `${pageBase}dashboard.html`, roles: ["admin", "user"] },
+    { label: "Send", href: `${pageBase}send.html`, roles: ["admin", "user"] },
+    { label: "Request", href: `${pageBase}request.html`, roles: ["admin", "user"] },
+    { label: "Transactions", href: `${pageBase}transactions.html`, roles: ["admin", "user"] },
+    { label: "Profile", href: `${pageBase}profile.html`, roles: ["admin", "user"] },
+    { label: "Admin Panel", href: `${pageBase}admin.html`, roles: ["admin"] },
   ];
 
   const navItems = links.filter(link => link.roles.includes(userRole));
@@ -25,8 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Compute asset base path so images load whether the page is in root or under /pages/
   const assetBase = (function(){
-    // If current path contains '/pages/' then logos should be referenced with '../assets'
-    return window.location.pathname.includes('/pages/') ? '../assets' : '/assets';
+    // If current path contains '/pages/' then logos should be referenced with '../assets',
+    // otherwise use a relative './assets' so local static servers work when serving the repo root.
+    return window.location.pathname.includes('/pages/') ? '../assets' : './assets';
   })();
 
   navbar.innerHTML = `
@@ -36,10 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="flex items-center">
             <a href="dashboard.html" class="flex items-center gap-3">
               <img src="${assetBase}/PeoplePayLogo.jpg" alt="PeoplePay" class="brand-mark" onerror="this.style.display='none'" />
-              <svg class="brand-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false" style="display:inline-block">
-                <rect width="48" height="48" rx="8" fill="#2563eb"></rect>
-                <text x="50%" y="54%" text-anchor="middle" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="18">PP</text>
-              </svg>
               <span class="font-semibold text-lg">PeoplePay</span>
             </a>
             <nav class="ml-8" aria-label="Primary">
