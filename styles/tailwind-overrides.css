@@ -28,13 +28,19 @@
 */
 
 :root {
-  /* Brand palette */
-  --pp-primary: #2563eb;    /* blue-600 */
-  --pp-primary-600: #1d4ed8;/* blue-700 */
-  --pp-accent: #10b981;     /* emerald-500 */
-  --pp-muted: #6b7280;      /* gray-500 */
-  --pp-bg: #f8fafc;         /* gray-50 */
-  --pp-surface: #ffffff;    /* surface */
+  /*
+    PeoplePay theme variables. To customize at runtime, set window.PP_UI = {
+      colors: { primary: '#00c853', primary600: '#00b24d', accent: '#00e676', muted: '#6b7280', bg: '#f8fafc', surface: '#fff' },
+      logo: './assets/PeoplePayLogo.svg'
+    }
+    BEFORE the components scripts run (for example in index.html). The navbar will read these and set CSS vars.
+  */
+  --pp-primary: #2563eb;
+  --pp-primary-600: #1d4ed8;
+  --pp-accent: #10b981;
+  --pp-muted: #6b7280;
+  --pp-bg: #f8fafc;
+  --pp-surface: #ffffff;
 
   /* Typography scale */
   --pp-h1: 1.5rem; /* 24px */

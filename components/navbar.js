@@ -33,13 +33,32 @@ document.addEventListener("DOMContentLoaded", () => {
     return window.location.pathname.includes('/pages/') ? '../assets' : './assets';
   })();
 
+  // Runtime UI overrides: allow pages to set window.PP_UI = { colors: {...}, logo: 'path' }
+  if (window.PP_UI) {
+    try {
+      const c = window.PP_UI.colors || {};
+      if (c.primary) document.documentElement.style.setProperty('--pp-primary', c.primary);
+      if (c.primary600) document.documentElement.style.setProperty('--pp-primary-600', c.primary600);
+      if (c.accent) document.documentElement.style.setProperty('--pp-accent', c.accent);
+      if (c.muted) document.documentElement.style.setProperty('--pp-muted', c.muted);
+      if (c.bg) document.documentElement.style.setProperty('--pp-bg', c.bg);
+      if (c.surface) document.documentElement.style.setProperty('--pp-surface', c.surface);
+      if (window.PP_UI.logo) {
+        // expose a global so template can pick it up
+        window.PP_UI_LOGO = window.PP_UI.logo;
+      }
+    } catch (e) {
+      console.warn('PP_UI parse error', e);
+    }
+  }
+
   navbar.innerHTML = `
     <div class="bg-white border-b">
       <div class="pp-container">
         <div class="flex justify-between h-16 items-center">
           <div class="flex items-center">
             <a href="dashboard.html" class="flex items-center gap-3">
-              <img src="${assetBase}/PeoplePayLogo.jpg" alt="PeoplePay" class="brand-mark" onerror="this.style.display='none'" />
+              <img src="${(window.PP_UI_LOGO) ? window.PP_UI_LOGO : assetBase + '/PeoplePayLogo.jpg'}" alt="PeoplePay" class="brand-mark" onerror="this.style.display='none'" />
               <span class="font-semibold text-lg">PeoplePay</span>
             </a>
             <nav class="ml-8" aria-label="Primary">
