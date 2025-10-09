@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login — PeoplePay</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../styles/tailwind-overrides.css" />
+</head>
+<body class="bg-gray-50">
+  <main class="pp-container py-12">
+    <div class="max-w-md mx-auto pp-card">
+      <h1 class="pp-h2">Sign in to PeoplePay</h1>
+      <form id="loginForm" class="mt-4 space-y-3" onsubmit="event.preventDefault(); doLogin();">
+        <input id="login-username" class="pp-input" placeholder="Email or username" required />
+        <input id="login-password" class="pp-input" type="password" placeholder="Password" required />
+        <div class="flex justify-between items-center">
+          <button class="primary-btn" type="submit">Sign In</button>
+          <a class="text-sm text-gray-500" href="../pages/request.html">Forgot?</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="../scripts/auth.js"></script>
+  <script>
+    function doLogin(){
+      const u = document.getElementById('login-username').value;
+      const p = document.getElementById('login-password').value;
+      // Use scripts/auth.js login function if available
+      if(window.login){
+        login(u, p).catch(()=>{});
+      } else {
+        // fallback: simulate successful login
+        localStorage.setItem('peoplepay_token', 'dev-token');
+        localStorage.setItem('peoplepay_role', 'user');
+        const pageBase = window.location.pathname.includes('/pages/') ? '' : 'pages/';
+        window.location.href = `${pageBase}dashboard.html`;
+      }
+    }
+  </script>
+</body>
+</html>

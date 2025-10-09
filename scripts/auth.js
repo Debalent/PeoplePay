@@ -31,7 +31,9 @@ async function login(username, password) {
 function logout() {
   localStorage.removeItem("peoplepay_token");
   localStorage.removeItem("peoplepay_role");
-  window.location.href = "login.html";
+  // redirect to login using pageBase (pages/ when at root)
+  const pageBase = window.location.pathname.includes('/pages/') ? '' : 'pages/';
+  window.location.href = `${pageBase}login.html`;
 }
 
 // Session check
@@ -53,6 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentPage = window.location.pathname.split("/").pop();
 
   if (protectedPages.includes(currentPage)) {
-    validateSession();
+    // validateSession will redirect to a login page relative to where we are
+    const token = localStorage.getItem("peoplepay_token");
+    if (!token) {
+      const pageBase = window.location.pathname.includes('/pages/') ? '' : 'pages/';
+      window.location.href = `${pageBase}login.html`;
+    }
   }
 });

@@ -141,7 +141,8 @@ document.addEventListener("DOMContentLoaded", () => {
 function logout() {
   localStorage.removeItem("peoplepay_token");
   localStorage.removeItem("peoplepay_role");
-  window.location.href = "login.html";
+  const pageBase = window.location.pathname.includes('/pages/') ? '' : 'pages/';
+  window.location.href = `${pageBase}login.html`;
 }
 
 function openNotifications() {
