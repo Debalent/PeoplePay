@@ -23,13 +23,23 @@ document.addEventListener("DOMContentLoaded", () => {
     return `\n      <li class="mr-4 inline-block">\n        <a class="${activeClass} hover:text-blue-600" href="${link.href}">${link.label}</a>\n      </li>`;
   }).join('');
 
+  // Compute asset base path so images load whether the page is in root or under /pages/
+  const assetBase = (function(){
+    // If current path contains '/pages/' then logos should be referenced with '../assets'
+    return window.location.pathname.includes('/pages/') ? '../assets' : '/assets';
+  })();
+
   navbar.innerHTML = `
     <div class="bg-white border-b">
       <div class="pp-container">
         <div class="flex justify-between h-16 items-center">
           <div class="flex items-center">
             <a href="dashboard.html" class="flex items-center gap-3">
-              <img src="/assets/PeoplePayLogo.jpg" alt="PeoplePay" class="brand-mark" />
+              <img src="${assetBase}/PeoplePayLogo.jpg" alt="PeoplePay" class="brand-mark" onerror="this.style.display='none'" />
+              <svg class="brand-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false" style="display:inline-block">
+                <rect width="48" height="48" rx="8" fill="#2563eb"></rect>
+                <text x="50%" y="54%" text-anchor="middle" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="18">PP</text>
+              </svg>
               <span class="font-semibold text-lg">PeoplePay</span>
             </a>
             <nav class="ml-8" aria-label="Primary">
@@ -47,19 +57,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="carousel" data-current="0">
                   <div class="carousel-track">
                     <div class="carousel-item">
-                      <img src="/assets/PeoplePayLogo.jpg" class="w-full h-36 object-cover rounded-md" alt="Send Money">
+                      <img src="${assetBase}/PeoplePayLogo.jpg" class="w-full h-36 object-cover rounded-md" alt="Send Money">
                       <h4 class="mt-2 font-semibold">Send Money</h4>
                       <p class="text-sm text-gray-600">Quickly send money to friends and family.</p>
                       <a href="send.html" class="inline-block mt-2 primary-btn text-sm">Open</a>
                     </div>
                     <div class="carousel-item hidden">
-                      <img src="/assets/PeoplePayLogo.jpg" class="w-full h-36 object-cover rounded-md" alt="Request Payment">
+                      <img src="${assetBase}/PeoplePayLogo.jpg" class="w-full h-36 object-cover rounded-md" alt="Request Payment">
                       <h4 class="mt-2 font-semibold">Request Payment</h4>
                       <p class="text-sm text-gray-600">Create and share payment requests.</p>
                       <a href="request.html" class="inline-block mt-2 primary-btn text-sm">Open</a>
                     </div>
                     <div class="carousel-item hidden">
-                      <img src="/assets/PeoplePayLogo.jpg" class="w-full h-36 object-cover rounded-md" alt="Transactions">
+                      <img src="${assetBase}/PeoplePayLogo.jpg" class="w-full h-36 object-cover rounded-md" alt="Transactions">
                       <h4 class="mt-2 font-semibold">Transactions</h4>
                       <p class="text-sm text-gray-600">Review recent activity and exports.</p>
                       <a href="transactions.html" class="inline-block mt-2 primary-btn text-sm">Open</a>
