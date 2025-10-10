@@ -1,9 +1,0 @@
-{
-  "name": "streampilot",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "start-backend": "node backend/index.js",
-    "start-client": "cd app && npm install && npm run dev"
-  }
-}
