@@ -1,0 +1,29 @@
+[
+  {
+    "id": "p1",
+    "title": "Morning News",
+    "channel": "Local 1",
+    "start": "2025-10-09T06:00:00Z",
+    "end": "2025-10-09T07:00:00Z",
+    "description": "Daily local news and weather.",
+    "genre": "News"
+  },
+  {
+    "id": "p2",
+    "title": "Cartoon Hour",
+    "channel": "Kids Network",
+    "start": "2025-10-09T07:00:00Z",
+    "end": "2025-10-09T08:00:00Z",
+    "description": "Animated shows for kids.",
+    "genre": "Kids"
+  },
+  {
+    "id": "p3",
+    "title": "Cooking Live",
+    "channel": "Foodie",
+    "start": "2025-10-09T09:00:00Z",
+    "end": "2025-10-09T10:00:00Z",
+    "description": "Live cooking show with guests.",
+    "genre": "Lifestyle"
+  }
+]

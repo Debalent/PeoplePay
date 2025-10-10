@@ -3,38 +3,27 @@
    Tailwind Play CDN migration. Avoids using @apply so no build step is
    required. Add or tweak tokens as needed.
 */
-  --pp-accent: #10b981;     /* emerald-500 */
-  --pp-muted: #6b7280;      /* gray-500 */
-  --pp-bg: #f8fafc;         /* gray-50 */
-  --pp-surface: #ffffff;    /* surface */
-
-  /* Typography scale */
-  --pp-h1: 1.5rem; /* 24px */
-  --pp-h2: 1.25rem; /* 20px */
-  --pp-body: 1rem;  /* 16px */
-}
-+
-+
-/* Layout helpers */
-.pp-container { max-width: 1120px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
-.pp-card { background: var(--pp-surface); border-radius: .5rem; box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 2px 6px rgba(16,24,40,0.06); padding: 1rem; }
-.pp-muted { color: var(--pp-muted); }
-
-/* Buttons */
-/* tailwind-overrides.css
-   Enhanced design tokens and a small utility surface to smooth the
-   Tailwind Play CDN migration. Avoids using @apply so no build step is
-   required. Add or tweak tokens as needed.
-*/
 
 :root {
   /*
     PeoplePay theme variables. To customize at runtime, set window.PP_UI = {
-      colors: { primary: '#00c853', primary600: '#00b24d', accent: '#00e676', muted: '#6b7280', bg: '#f8fafc', surface: '#fff' },
+      colors: {
+        primary: '#2563eb',          // primary button/background
+        primary600: '#1d4ed8',       // hover/darker primary
+        accent: '#10b981',           // accent (positive) actions
+        muted: '#6b7280',            // subdued text
+        bg: '#f8fafc',               // page background
+        surface: '#ffffff'           // cards / surfaces
+      },
       logo: './assets/PeoplePayLogo.svg'
     }
-    BEFORE the components scripts run (for example in index.html). The navbar will read these and set CSS vars.
+
+    For best results set window.PP_UI before component scripts run
+    (for example include a small inline script in `index.html` that
+    assigns window.PP_UI). The runtime script `components/theme.js`
+    will apply these values to CSS variables automatically.
   */
+
   --pp-primary: #2563eb;
   --pp-primary-600: #1d4ed8;
   --pp-accent: #10b981;
@@ -47,7 +36,6 @@
   --pp-h2: 1.25rem; /* 20px */
   --pp-body: 1rem;  /* 16px */
 }
-
 
 /* Layout helpers */
 .pp-container { max-width: 1120px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
@@ -101,3 +89,4 @@
 /* Typographic helpers */
 .pp-h1 { font-size: var(--pp-h1); font-weight: 700; }
 .pp-h2 { font-size: var(--pp-h2); font-weight: 600; }
+

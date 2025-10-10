@@ -30,7 +30,7 @@
       <div class="qr-container">
         <canvas id="qrCanvas" aria-label="QR code for payment request"></canvas>
       </div>
-      <input type="text" id="requestLink" readonly />
+        <input type="text" id="requestLink" readonly aria-label="Shareable request link" />
       <button onclick="copyRequestLink()" class="secondary-btn">Copy Link</button>
     </section>
   </main>
@@ -38,6 +38,8 @@
   <footer id="footer"></footer>
   <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
 
+  <!-- Theme loader (applies window.PP_UI) -->
+  <script src="../components/theme.js"></script>
   <script src="../components/navbar.js"></script>
   <script src="../components/footer.js"></script>
   <script src="../components/toast.js"></script>
