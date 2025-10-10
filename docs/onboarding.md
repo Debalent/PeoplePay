@@ -29,6 +29,7 @@ cp .env.example .env
 ```
 
 Required environment variables:
+
 - `DATABASE_URL`: PostgreSQL connection string
 - `REDIS_URL`: Redis connection string
 - `JWT_SECRET`: Secret for JWT token signing
@@ -54,14 +55,15 @@ npm run dev
 ```
 
 This will start:
-- Web app at http://localhost:3000
-- API server at http://localhost:8000
-- Admin dashboard at http://localhost:3001
-- Storybook at http://localhost:6006
+
+- Web app at <http://localhost:3000>
+- API server at <http://localhost:8000>
+- Admin dashboard at <http://localhost:3001>
+- Storybook at <http://localhost:6006>
 
 ## Project Structure
 
-```
+```text
 peoplepay/
 ├── apps/                    # Frontend applications
 │   ├── web/                # Next.js web app
