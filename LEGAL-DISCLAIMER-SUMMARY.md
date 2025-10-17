@@ -47,7 +47,7 @@
 ## 📞 CONTACT
 **Demond J. Balentine**  
 demond.balentine@atlasstudents.com  
-+1 (555) 123-4567
++1 (479) 250 2573
 
 **SEEK LEGAL COUNSEL**: Consult attorney before making business decisions based on disclosed information.
 
