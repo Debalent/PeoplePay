@@ -1,0 +1,54 @@
+====================================================================
+                   PEOPLEPAY ENTERPRISE DEMO
+                    Professional Fintech Platform
+====================================================================
+
+🚀 QUICK START GUIDE - 30 SECONDS TO DEMO!
+
+📋 REQUIREMENTS:
+• Node.js (Download: https://nodejs.org if not installed)
+• Web Browser (Chrome, Firefox, Safari, Edge)
+
+⚡ LAUNCH STEPS:
+1. Extract this ZIP to any folder
+2. Open Terminal/Command Prompt in this folder
+3. Type: node demo-server.js
+4. Open browser to: http://localhost:3001
+
+🌐 WHAT YOU'LL SEE:
+• Professional business presentation
+• $2.4M+ monthly transaction volume
+• 99.9% uptime enterprise metrics
+• Interactive demo with working features
+• Complete compliance certifications
+
+💰 INVESTMENT HIGHLIGHTS:
+• $7.3T global payment market opportunity
+• Multiple revenue streams (transaction fees, SaaS, licensing)
+• Enterprise-ready with PCI DSS, SOC 2, GDPR compliance
+• Blockchain integration and smart contracts
+• Ready for immediate production deployment
+
+📞 CONTACT FOR INVESTMENT/ACQUISITION:
+• Email: demond.balentine@atlasstudents.com
+• Phone: +1 (555) 123-4567
+• LinkedIn: /in/demond-balentine
+• GitHub: https://github.com/Debalent/PeoplePay
+
+Demo prepared for: Arlo Washington
+Contact: Demond J. Balentine, Founder & CEO
+
+🔍 DEMO NAVIGATION:
+Once running at localhost:3001:
+• / - Business overview and investment case
+• /demo - Interactive platform demonstration  
+• /platform - Live UI with working features
+• /business - Detailed business presentation
+
+⚡ TROUBLESHOOTING:
+• If port 3001 is busy, the server will try 3002, 3003, etc.
+• Need Node.js? Download from: https://nodejs.org
+• Questions? Check CLIENT-SETUP-GUIDE.md for details
+
+© 2025 PeoplePay Inc. - Confidential Demo Materials
+====================================================================

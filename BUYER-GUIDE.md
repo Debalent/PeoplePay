@@ -115,7 +115,7 @@ This is a **live demonstration** of our enterprise-grade fintech platform that i
 4. **Evaluate Investment** - Consider revenue potential
 
 ### Contact Information
-- **Email**: sales@peoplepay.com
+- **Email**: demond.balentine@atlasstudents.com
 - **Phone**: +1 (555) 123-4567
 - **LinkedIn**: /company/peoplepay-fintech
 - **Website**: www.peoplepay.com

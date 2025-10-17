@@ -56,9 +56,11 @@ This is a demonstration of the PeoplePay enterprise fintech platform - a compreh
 
 ## Contact Information
 
-**Technical Inquiries**: dev@peoplepay.com
-**Business Development**: sales@peoplepay.com
-**Security Questions**: security@peoplepay.com
+**Primary Contact**: Demond J. Balentine, Founder & CEO
+**Email**: demond.balentine@atlasstudents.com
+**Phone**: +1 (555) 123-4567
+**LinkedIn**: /in/demond-balentine
+**GitHub**: https://github.com/Debalent/PeoplePay
 
 ---
 
