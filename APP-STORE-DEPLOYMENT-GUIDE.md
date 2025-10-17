@@ -1,6 +1,7 @@
 # 📱 PeoplePay Mobile App Store Deployment Guide
 
 ## For: Arlo Washington
+
 ## Prepared by: Demond J. Balentine
 
 ---
@@ -90,7 +91,8 @@ xcodebuild -exportArchive \
    - **App Name**: PeoplePay - Digital Payments
    - **Subtitle**: Enterprise Fintech Platform
    - **Description**:
-     ```
+
+     ```text
      PeoplePay delivers enterprise-grade digital payment solutions with 
      blockchain integration, regulatory compliance, and real-time processing.
 
@@ -116,7 +118,7 @@ xcodebuild -exportArchive \
 
 4. **App Preview and Screenshots**
    - **Required sizes**: 6.7" iPhone, 6.5" iPhone, 5.5" iPhone
-   - **Screenshot specifications**: 
+   - **Screenshot specifications**:
      - Resolution: 1290x2796 pixels (6.7"), 1284x2778 pixels (6.5")
      - Format: PNG or JPEG
      - Color space: sRGB or P3
@@ -137,7 +139,8 @@ xcodebuild -exportArchive \
    - Document any special requirements
 
 3. **App Review Information**
-   ```
+
+   ```text
    Demo Account Credentials:
    Email: demo@peoplepay.com
    Password: DemoReviewer2025!
@@ -174,7 +177,7 @@ xcodebuild -exportArchive \
      - **Free or paid**: Free
      - **Declarations**: Check all applicable policies
 
-### Step 2: Technical Implementation
+### Step 2: Android App Technical Implementation
 
 ```bash
 # React Native Android Build
@@ -195,7 +198,8 @@ cd android
    - **App name**: PeoplePay - Digital Payments
    - **Short description**: Enterprise fintech platform with blockchain security
    - **Full description**:
-     ```
+
+     ```text
      Transform your digital payment experience with PeoplePay - the enterprise-grade 
      fintech platform trusted by businesses worldwide.
 

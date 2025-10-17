@@ -1,23 +1,27 @@
 # PeoplePay Demo - For Potential Buyers
 
 ## Overview
+
 This is a demonstration of the PeoplePay enterprise fintech platform - a comprehensive solution for secure peer-to-peer payments with blockchain integration.
 
 ## Quick Start Guide
 
 ### Option 1: Simple Local Server (Recommended)
+
 1. Download this demo package
 2. Open terminal/command prompt in the demo folder
 3. Run: `node demo-server.js`
-4. Open browser to: http://localhost:3000
+4. Open browser to: <http://localhost:3000>
 
 ### Option 2: Direct File Access
+
 1. Double-click on `apps/web/index.html`
 2. View in any modern web browser
 
 ## Demo Features
 
-### ✅ What You'll See:
+### What You'll See
+
 - **Professional Dashboard** - Modern fintech interface
 - **Real-time Navigation** - Interactive menu system
 - **Transaction History** - Sample financial data
@@ -25,14 +29,16 @@ This is a demonstration of the PeoplePay enterprise fintech platform - a compreh
 - **Mobile Responsive** - Works on all devices
 - **Enterprise Branding** - Professional design system
 
-### 🏗️ Architecture Highlights:
+### Architecture Highlights
+
 - **Monorepo Structure** - Scalable enterprise architecture
 - **Microservices Ready** - Authentication, Payments, Compliance services
 - **Blockchain Integration** - Crypto and traditional payment support
 - **Compliance Built-in** - KYC/AML, GDPR, PCI DSS ready
 - **Docker Deployment** - Production-ready containerization
 
-### 🔧 Technical Stack:
+### Technical Stack
+
 - **Frontend**: Modern HTML5, Tailwind CSS, Vanilla JavaScript
 - **Backend Services**: Node.js, TypeScript, Express
 - **Database**: PostgreSQL, Redis, IPFS
@@ -42,13 +48,15 @@ This is a demonstration of the PeoplePay enterprise fintech platform - a compreh
 
 ## Business Value
 
-### For Financial Institutions:
+### For Financial Institutions
+
 - Regulatory compliance built-in
 - Enterprise-grade security
 - Scalable microservices architecture
 - Real-time fraud detection
 
-### For Fintech Startups:
+### For Fintech Startups
+
 - Rapid deployment capabilities
 - Comprehensive feature set
 - Modern user experience
@@ -57,10 +65,14 @@ This is a demonstration of the PeoplePay enterprise fintech platform - a compreh
 ## Contact Information
 
 **Primary Contact**: Demond J. Balentine, Founder & CEO
-**Email**: demond.balentine@atlasstudents.com
+
+**Email**: <demond.balentine@atlasstudents.com>
+
 **Phone**: +1 (555) 123-4567
+
 **LinkedIn**: /in/demond-balentine
-**GitHub**: https://github.com/Debalent/PeoplePay
+
+**GitHub**: <https://github.com/Debalent/PeoplePay>
 
 ---
 
