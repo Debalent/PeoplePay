@@ -11,6 +11,13 @@ Thank you for your interest in PeoplePay. As requested, I've prepared a comprehe
 
 ## 📦 Complete Package Contents
 
+### ⚖️ **LEGAL-DISCLAIMER.md** - **READ FIRST**
+**REQUIRED: Legal protection and confidentiality agreement**
+- Confidentiality and non-disclosure obligations
+- Liability disclaimers and limitations
+- Business and technical disclaimers
+- Terms of use and prohibited activities
+
 ### 1. **COMPLETE-BUYER-WALKTHROUGH.md**
 **Your comprehensive acquisition guide including:**
 - Live platform demonstration instructions
@@ -117,7 +124,7 @@ I'm available for immediate discussion and can provide:
 **Preferred**: Phone call or video conference for initial discussion
 
 ### Confidentiality
-All materials provided are confidential and proprietary to PeoplePay Inc. This information is shared exclusively for your evaluation under mutual confidentiality agreement.
+**IMPORTANT**: All materials provided are confidential and proprietary to PeoplePay Inc. By accessing these materials, you agree to the terms outlined in LEGAL-DISCLAIMER.md. This information is shared exclusively for your evaluation under mutual confidentiality agreement with full legal protection for both parties.
 
 ## 🚀 Ready to Transform Fintech Together?
 

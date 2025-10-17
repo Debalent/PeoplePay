@@ -3,6 +3,10 @@
                     Professional Fintech Platform
 ====================================================================
 
+⚖️ LEGAL NOTICE - READ FIRST:
+By accessing this demo, you agree to confidentiality terms in 
+LEGAL-DISCLAIMER.md. All information is proprietary and protected.
+
 🚀 QUICK START GUIDE - 30 SECONDS TO DEMO!
 
 📋 REQUIREMENTS:
