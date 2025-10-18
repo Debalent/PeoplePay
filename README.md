@@ -1,5 +1,7 @@
 # PeoplePay
 
+![PeoplePay Logo](./assets/PeoplePayLogo.jpg)
+
 A comprehensive fintech platform for secure peer-to-peer payments, built with enterprise-grade architecture and blockchain integration.
 
 ## 🚀 Live Demo Access

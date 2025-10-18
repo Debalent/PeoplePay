@@ -286,6 +286,7 @@ cd android
 ### App Store Specific Requirements
 
 **Apple App Store Financial Services Guidelines:**
+
 - Clear disclosure of fees and pricing
 - Secure authentication mechanisms
 - Compliance with local financial regulations
@@ -293,6 +294,7 @@ cd android
 - Customer support contact information
 
 **Google Play Financial Services Policies:**
+
 - Transparent business model disclosure
 - Secure payment processing implementation
 - User fund protection measures
@@ -306,6 +308,7 @@ cd android
 ### Keyword Strategy
 
 **Primary Keywords:**
+
 - Digital payments
 - Mobile banking
 - Fintech platform
@@ -315,6 +318,7 @@ cd android
 - Payment processing
 
 **Long-tail Keywords:**
+
 - Enterprise payment solution
 - Blockchain money transfer
 - Secure digital wallet
@@ -323,27 +327,32 @@ cd android
 
 ### App Store Screenshots Strategy
 
-**Screenshot 1: Dashboard Overview**
+#### Screenshot 1: Dashboard Overview
+
 - Show main dashboard with transaction summary
 - Highlight $2.4M+ processing volume
 - Display 99.9% uptime metric
 
-**Screenshot 2: Send Money Feature**
+#### Screenshot 2: Send Money Feature
+
 - Demonstrate intuitive send money interface
 - Show security features (biometric auth)
 - Highlight instant transfer capability
 
-**Screenshot 3: Analytics Dashboard**
+#### Screenshot 3: Analytics Dashboard
+
 - Display real-time analytics
 - Show transaction history
 - Highlight business intelligence features
 
-**Screenshot 4: Security Features**
+#### Screenshot 4: Security Features
+
 - Showcase compliance badges
 - Display security certifications
 - Highlight fraud protection measures
 
-**Screenshot 5: Business Features**
+#### Screenshot 5: Business Features
+
 - Show enterprise dashboard
 - Display API integration capabilities
 - Highlight multi-user management
@@ -354,13 +363,15 @@ cd android
 
 ### Phase 1: Pre-Launch (Weeks 1-4)
 
-**Week 1-2: Development Account Setup**
+#### Week 1-2: Development Account Setup
+
 - [ ] Create Apple Developer account
 - [ ] Create Google Play Console account
 - [ ] Complete business verification
 - [ ] Set up code signing certificates
 
-**Week 3-4: App Preparation**
+#### Week 3-4: App Preparation
+
 - [ ] Finalize mobile app builds
 - [ ] Create app store assets (icons, screenshots)
 - [ ] Write app descriptions and metadata
@@ -368,19 +379,22 @@ cd android
 
 ### Phase 2: Submission and Review (Weeks 5-8)
 
-**Week 5: Initial Submission**
+#### Week 5: Initial Submission
+
 - [ ] Submit to Apple App Store
 - [ ] Submit to Google Play Store
 - [ ] Monitor review status daily
 - [ ] Respond to any reviewer feedback
 
-**Week 6-7: Review Process**
+#### Week 6-7: Review Process
+
 - [ ] Apple review (typically 1-7 days)
 - [ ] Google review (typically 1-3 days)
 - [ ] Address any rejection issues
 - [ ] Resubmit if necessary
 
-**Week 8: Approval and Release**
+#### Week 8: Approval and Release
+
 - [ ] Receive app approvals
 - [ ] Schedule coordinated release
 - [ ] Monitor initial user feedback
@@ -388,13 +402,15 @@ cd android
 
 ### Phase 3: Post-Launch (Weeks 9-12)
 
-**Week 9-10: Launch Marketing**
+#### Week 9-10: Launch Marketing
+
 - [ ] Announce app availability
 - [ ] Execute marketing campaigns
 - [ ] Monitor app store rankings
 - [ ] Collect user feedback and reviews
 
-**Week 11-12: Optimization**
+#### Week 11-12: Optimization
+
 - [ ] Analyze user acquisition metrics
 - [ ] Optimize app store listings based on performance
 - [ ] Plan first update based on user feedback
@@ -458,9 +474,9 @@ const setupIAP = async () => {
 
 1. **Support Channels**
    - In-app chat support
-   - Email: support@peoplepay.com
+   - Email: <support@peoplepay.com>
    - Phone: +1 (555) 123-4567
-   - Knowledge base: help.peoplepay.com
+   - Knowledge base: <help.peoplepay.com>
 
 2. **Response Time Commitments**
    - Critical issues: 1 hour
@@ -533,6 +549,7 @@ const setupIAP = async () => {
 ### Investment Considerations
 
 **Total Launch Investment**: $75,000 - $125,000
+
 - Development accounts and fees: $500
 - Legal and compliance: $25,000 - $50,000
 - Marketing and launch: $30,000 - $50,000
@@ -540,6 +557,7 @@ const setupIAP = async () => {
 - Working capital: $5,000
 
 **Expected ROI Timeline**: 6-12 months to profitability
+
 - Month 1-3: User acquisition and onboarding
 - Month 4-6: Revenue ramp-up and optimization
 - Month 7-12: Scale and expansion
@@ -549,12 +567,13 @@ const setupIAP = async () => {
 ## 📞 Contact Information
 
 **Primary Contact**: Demond J. Balentine, Founder & CEO  
-**Email**: demond.balentine@atlasstudents.com  
+**Email**: <demond.balentine@atlasstudents.com>  
 **Phone**: +1 (555) 123-4567  
 **LinkedIn**: /in/demond-balentine  
 **GitHub**: <https://github.com/Debalent/PeoplePay>
 
 **Available for:**
+
 - Technical architecture deep-dives
 - Business model discussions
 - Compliance and regulatory guidance
@@ -565,4 +584,10 @@ const setupIAP = async () => {
 
 *This guide represents the complete deployment strategy for PeoplePay mobile applications. All estimates are based on current market conditions and industry standards as of October 2025.*
 
-**© 2025 PeoplePay Inc. - Confidential Business Documentation**
+---
+
+---
+
+© 2025 PeoplePay Inc. - Confidential Business Documentation
+ 
+ 
