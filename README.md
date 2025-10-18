@@ -16,6 +16,7 @@ node demo-server.js
 ```
 
 **Demo Features:**
+
 - 💼 **Business Overview** - Investment highlights and market opportunity
 - 🎮 **Interactive Demo** - Live platform with working features  
 - 📊 **Real Metrics** - $2.4M+ volume, 99.9% uptime, 45ms response
@@ -70,6 +71,7 @@ PeoplePay is structured as a monorepo with the following components:
 ### For Clients & Investors - Demo Access
 
 **🎯 Quick Demo Launch:**
+
 ```bash
 # Navigate to the project folder
 cd "c:\Users\Admin\Documents\modernize-a-1990s-web-page-Debalent\PeoplePay MVP\PeoplePay MVP\PeoplePay"
@@ -79,6 +81,7 @@ node demo-server.js
 ```
 
 **🌐 Access the Platform:**
+
 - **Business Overview**: `http://localhost:3001` - Investment highlights & market opportunity
 - **Live Demo**: `http://localhost:3001/demo` - Interactive platform demonstration  
 - **Technical Docs**: `http://localhost:3001/readme` - Complete documentation
