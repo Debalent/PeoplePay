@@ -225,6 +225,7 @@ export const NavBar: React.FC<NavBarProps> = ({
                           {exploreItems.map((_, index) => (
                             <button
                               key={index}
+                              title={`Go to slide ${index + 1}`}
                               onClick={() => setCurrentExploreIndex(index)}
                               className={`w-2 h-2 rounded-full transition-colors duration-200 ${
                                 index === currentExploreIndex ? 'bg-blue-600' : 'bg-gray-300'
